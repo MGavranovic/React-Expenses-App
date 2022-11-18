@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import './ExpenseForm.css';
 
+/*
+TO DO
+- Will have to implement error functionaliy in case of submiting an empty form
+*/
+
 const ExpenseForm = props => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -44,7 +49,7 @@ const ExpenseForm = props => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
