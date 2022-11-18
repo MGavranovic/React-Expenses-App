@@ -1,6 +1,11 @@
 import './ExpensesList.css';
 import ExpenseItem from './ExpenseItem';
 
+/*
+TODO
+- Have to implement data preservation functionality (prob using Local storage)
+*/
+
 const ExpensesList = props => {
   if (props.items.length === 0) {
     return <h2 className="expenses-list__fallback">Found no expenses.</h2>;
